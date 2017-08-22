@@ -1,0 +1,16 @@
+package com.muke;
+
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.image.BufferedImage;
+
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+
+public class ImageServlet extends HttpServlet{
+	public void doGet(HttpServletRequest request,HttpServletRequest response){
+		BufferedImage bi = new BufferedImage(68, 22, BufferedImage.TYPE_INT_RGB);
+		Graphics g =bi.getGraphics();
+		Color c= new Color(200);
+	}
+}

@@ -18,3 +18,17 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.jst.server.tomcat.core 4 0 2017-08-22 15:48:16.580
 !MESSAGE Tomcat v7.0 Server @ localhost 需要的端口 8888 已在使用中。服务器可能已经运行了其它进程，或者系统进程可能正在使用此端口。要启动这个服务器您将需要停止其它进程或者更改端口号。
+
+!ENTRY org.eclipse.core.jobs 4 2 2017-08-23 09:46:15.358
+!MESSAGE An internal error occurred during: "Auto share git projects".
+!STACK 0
+java.lang.IllegalArgumentException: Attempted to beginRule: R/, does not match outer scope rule: MultiRule[P/org.eclipse.jface.text]
+	at org.eclipse.core.runtime.Assert.isLegal(Assert.java:63)
+	at org.eclipse.core.internal.jobs.ThreadJob.illegalPush(ThreadJob.java:134)
+	at org.eclipse.core.internal.jobs.ThreadJob.push(ThreadJob.java:333)
+	at org.eclipse.core.internal.jobs.ImplicitJobs.begin(ImplicitJobs.java:85)
+	at org.eclipse.core.internal.jobs.JobManager.beginRule(JobManager.java:290)
+	at org.eclipse.team.core.RepositoryProvider.map(RepositoryProvider.java:94)
+	at org.eclipse.egit.core.op.ConnectProviderOperation.execute(ConnectProviderOperation.java:154)
+	at org.eclipse.egit.core.internal.job.JobUtil$1.run(JobUtil.java:53)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)

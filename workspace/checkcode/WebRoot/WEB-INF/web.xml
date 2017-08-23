@@ -6,9 +6,17 @@
   	<servlet-name>ImageServlet</servlet-name>
   	<servlet-class>com.muke.ImageServlet</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>LoginServlet</servlet-name>
+  	<servlet-class>com.muke.LoginServlet</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>ImageServlet</servlet-name>
   	<url-pattern>/servlet/ImageServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>LoginServlet</servlet-name>
+  	<url-pattern>/servlet/LoginServlet</url-pattern>
   </servlet-mapping>
   
   
